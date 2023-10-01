@@ -1,19 +1,25 @@
 import pygame
 
+WIDTH = 30
+HEIGHT = 30
+SCREEN_HEIGHT = 400
+SCREEN_WIDTH = 400
+
 def main():
     pygame.init()
-
+    screen = pygame.display.set_mode((SCREEN_HEIGHT, SCREEN_WIDTH))
     pygame.display.set_caption("Bounce animation")
+    player = pygame.Rect(0, 0, WIDTH, HEIGHT)
 
-    screen = pygame.display.set_mode((720, 360))
-    
     # Game loop until quit
-    run = True
-    while run:
+    while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False
-#TODO Create game object -> rectangle (30, 30)
+                pygame.quit()
+                return
+        screen.fill((255, 255, 255))
+        pygame.draw.rect(screen, (0, 0, 255), player)
+        pygame.display.flip()
 
 
 if __name__ == "__main__":
