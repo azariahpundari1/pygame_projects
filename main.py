@@ -19,7 +19,7 @@ def main():
                 return
         screen.fill((255, 255, 255))
         pygame.draw.rect(screen, (0, 0, 255), player)
-        pygame.display.flip()
+        pygame.display.flip()  # updates screen
 
 
 if __name__ == "__main__":
