@@ -11,7 +11,7 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_HEIGHT, SCREEN_WIDTH))
     pygame.display.set_caption("Bounce animation")
-    player = pygame.Rect(200, 170, WIDTH, HEIGHT)
+    player = pygame.Rect(170, 170, WIDTH, HEIGHT)
     land = pygame.Rect(0, 200, SCREEN_WIDTH, LAND_HEIGHT)
 
     # Game loop until quit
