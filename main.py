@@ -23,6 +23,21 @@ def main():
         screen.fill((0, 0, 255))
         pygame.draw.rect(screen, (0, 255, 0), land)
         pygame.draw.rect(screen, (255, 0, 0), player)
+
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            print("Left arrow key pressed")
+        elif keys[pygame.K_RIGHT]:
+            print("Right arrow key pressed.")
+
+        # Player movement
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    player -= 30
+                if event.key == pygame.K_RIGHT:
+                    player += 30
         pygame.display.flip()  # updates screen
 
 
